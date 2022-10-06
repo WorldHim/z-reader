@@ -102,6 +102,14 @@
           if (e.keyCode == 39) {
             mVscodeHelper.on('nextChapter', {});
           }
+        });// 绑定鼠标侧键 - 翻页 by WorldHim
+        document.addEventListener('mousedown', function (e) {
+          if (e.button == 3) {
+            mVscodeHelper.on('lastChapter', {});
+          }
+          if (e.button == 4) {
+            mVscodeHelper.on('nextChapter', {});
+          }
         });
         // 更新进度
         var goProgress = function (data) {
